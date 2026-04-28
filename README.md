@@ -115,7 +115,6 @@ Disponibilidade mínima 99,9% em horário de produção.
 
 ### 1. Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](diagramas/casos_uso.png)
 
 **Atores identificados:**
 - **Operador de Chão de Fábrica**: Recebe notificações preventivas, visualiza orientações
@@ -129,8 +128,6 @@ Disponibilidade mínima 99,9% em horário de produção.
 ---
 
 ### 2. Diagrama de Atividades
-
-![Diagrama de Atividades](diagramas/atividades.png)
 
 **Fluxo crítico representado:** Detecção e alerta de EPI ausente
 
@@ -148,7 +145,6 @@ Disponibilidade mínima 99,9% em horário de produção.
 
 ### 3. Diagrama de Classes
 
-![Diagrama de Classes](diagramas/classes.png)
 
 **Entidades principais:**
 - **Usuario** (abstract) → herança para **Operador**, **Supervisor**, **Gestor**
