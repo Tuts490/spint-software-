@@ -12,7 +12,7 @@ Desenvolvido para o contexto do **Metaindústria**, o sistema não é uma ferram
 
 | Nome | rm |
 |------|-------|
-| **Arthur Augutus Sariva Pereira ** | 555106 |
+| **Arthur Augutus Sariva Pereira** | 555106 |
 | **André Bartolo Pellegrino dos Santos**| 558319 |  
 
 ---
@@ -159,4 +159,22 @@ Disponibilidade mínima 99,9% em horário de produção.
 - As atividades refletem os métodos das classes
 - Os relacionamentos UML respeitam o domínio industrial
 
+# Protótipo - Sistema de Gestão de EPIs e Segurança Industrial
 
+## Link do protótipo navegável (Figma)
+[Clique aqui para acessar o protótipo](https://perch-divide-87350593.figma.site)
+
+## Instruções de navegação
+- Navegue pelas telas usando os botões interativos.
+- Fluxos principais:
+  1. Cadastro e consulta de EPI por colaborador
+  2. Visualização e confirmação de alerta de risco
+  3. Geração de relatório de conformidade por setor
+
+## Vídeo de walkthrough
+[Assista ao vídeo explicativo](https://youtu.be/H64uD0sJVPw)
+
+## Decisões de UX
+- Design adaptado para uso em tablet industrial (botões grandes, alto contraste)
+- Alertas priorizados por urgência
+- Imagem ofuscada para conformidade com LGPD
