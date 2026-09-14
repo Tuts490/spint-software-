@@ -1,21 +1,29 @@
 #  ProactiveGuard - Sistema de Segurança Industrial Proativa com IA
 
+
 ##  Sobre o Projeto
+
 
 **ProactiveGuard** é uma solução inovadora de segurança industrial que substitui o modelo punitivo-tradicional por um sistema de **monitoramento contínuo baseado em Inteligência Artificial**, capaz de detectar riscos em tempo real, emitir alertas preventivos e promover uma cultura de prevenção antes da infração ocorrer.
 
+
 Desenvolvido para o contexto do **Metaindústria**, o sistema não é uma ferramenta genérica de RH, mas sim uma **ferramenta operacional de campo** integrada à lógica de segurança proativa do chão de fábrica.
+
 
 ---
 
+
 ##  Equipe
+
 
 | Nome | rm |
 |------|-------|
 | **Arthur Augutus Sariva Pereira** | 555106 |
 | **André Bartolo Pellegrino dos Santos**| 558319 |  
 
+
 ---
+
 
 ##  Problema Abordado
 Desenvolver um sistema de visão computacional focado em aprimorar a segurança contínua em ambientes fabris, com capacidade de identificar, alertar sobre e antecipar riscos potenciais aos trabalhadores.
@@ -23,97 +31,132 @@ Detectar, de maneira instantânea, a utilização adequada dos equipamentos de p
 Analisar posturas corporais inadequadas e o posicionamento dos funcionários em áreas de risco dentro da fábrica.
 Implementar notificações automáticas – sons, imagens e painéis de controle – em situações de perigo iminente.
 Utilizar dados históricos para treinar os modelos de inteligência artificial na previsão de possíveis ocorrências de acidentes.
-Realizar testes práticos em maquinários industriais padrão na etapa de conclusão do projeto. 
+Realizar testes práticos em maquinários industriais padrão na etapa de conclusão do projeto.
+
 
  ## proposta de solução
 
+
  Ainda é comum vermos acidentes nas fábricas por falta de equipamentos de proteção ou atitudes arriscadas. A questão não é só o descumprimento das normas, mas sim as pessoas – o cansaço, a necessidade de produzir mais rápido e a falta de atenção. Hoje, as soluções agem depois que o problema acontece: câmeras filmam, e os chefes repreendem após o acidente. Isso gera um custo alto para todos.
+
 
 A Nossa Proposta: Agir Antes que o Problema Aconteça
 
+
 Criamos um sistema que entende como o trabalhador costuma agir e identifica sinais que podem levar a um acidente. Veja um exemplo:
+
 
 João está trabalhando há 3 horas na linha de produção. O sistema identifica que ele está curvando as costas várias vezes e tirando o capacete rapidamente. Em vez de esperar que ele caia ou se machuque, o sistema avisa no painel e sugere que ele faça uma pausa. O robô que trabalha perto dele diminui um pouco a velocidade.
 
-## tecnologias selecionadas 
+
+## tecnologias selecionadas
+
 
 Tecnologia e Justificativa
 Python
 Ecossistema maduro para visão computacional (OpenCV, MediaPipe, YOLO) e integração com sistemas industriais.
 
+
 FastAPI
 Baixa latência, assíncrono, ideal para alertas em tempo real e endpoints REST leves.
+
 
 PostgreSQL + TimescaleDB
 Relacional para dados mestres + extensão time-series para logs contínuos de eventos de segurança.
 
+
 Redis + Pub/Sub
 Cache de alertas e fila de mensagens para notificações instantâneas (WebSockets).
+
 
 YOLOv8 + OpenCV
 Detecção de objetos/EPIs em imagem com alta performance (30+ FPS).
 
+
 React + PWA
 Interface adaptável para dispositivos móveis e fixos no chão de fábrica.
+
 
 Docker + Kubernetes
 Escalabilidade industrial e orquestração em ambientes de borda ou nuvem.
 
+
 ## justificativa técnica.
 
-A criação de algoritmos que identificam, instantaneamente, os Equipamentos de Proteção Individual (EPIs) e atos perigosos (como posturas incorretas e proximidade de áreas de risco) é o fundamento técnico deste desafio. A metodologia emprega técnicas atuais de Deep Learning, como redes neurais convolucionais (CNNs) para identificar objetos e estimar poses para avaliar a postura, em consonância com os ideais da Indústria 5.0 e Open Lab. 
+
+A criação de algoritmos que identificam, instantaneamente, os Equipamentos de Proteção Individual (EPIs) e atos perigosos (como posturas incorretas e proximidade de áreas de risco) é o fundamento técnico deste desafio. A metodologia emprega técnicas atuais de Deep Learning, como redes neurais convolucionais (CNNs) para identificar objetos e estimar poses para avaliar a postura, em consonância com os ideais da Indústria 5.0 e Open Lab.
+
 
  ## Requisitos Funcionais (RF)
+
 
 ID e Descrição
 RF01
 Detectar capacete, óculos, luva, colete e protetor auricular via câmera.
 
+
 RF02
 Emitir alerta sonoro/visual quando EPI ausente por > 2 segundos.
+
 
 RF03
 Registrar evento de risco com timestamp, local, EPI ausente e foto ofuscada.
 
+
 RF04
 Permitir que supervisor confirme ou descarte alerta manualmente.
+
 
 RF05
 Gerar relatório diário/semanal de conformidade por área/turno.
 
+
 RF06
 Enviar notificação push para operador e supervisor simultaneamente.
+
 
 RF07
 Dashboard com mapa térmico de riscos por zona da fábrica.
 
 
+
+
 RF08
 Modo "apenas prevenção" (sem registro de punição) – cultura de melhoria contínua.
+
 
 ## Requisitos Não Funcionais (RNF)
 ID e Descrição
 RNF01
 Tempo de inferência por frame ≤ 50ms (edge GPU).
 
+
 RNF02
 Sistema deve suportar 50 câmeras simultâneas.
+
 
 RNF03
 Interface responsiva (web/mobile) com PWA.
 
+
 RNF04
 APIs documentadas com Swagger.
+
 
 RNF05
 Logs de auditoria imutáveis para rastreabilidade.
 
+
 RNF06
 Disponibilidade mínima 99,9% em horário de produção.
 
+
 ##  Diagramas UML
 
+
 ### 1. Diagrama de Casos de Uso
+
+
 
 
 **Atores identificados:**
@@ -121,15 +164,20 @@ Disponibilidade mínima 99,9% em horário de produção.
 - **Supervisor de Segurança**: Registra alertas, confirma/descarta eventos, acessa dashboard
 - **Gestor Industrial**: Gera relatórios, acessa KPIs e mapa térmico de riscos
 
+
 **Principais relacionamentos:**
 - `<<include>>` no registro de alerta → geração de log automático
 - `<<extend>>` no modo prevenção ativa (sem punição)
 
+
 ---
+
 
 ### 2. Diagrama de Atividades
 
+
 **Fluxo crítico representado:** Detecção e alerta de EPI ausente
+
 
 **Etapas principais:**
 1. Captura de frame da câmera (30 FPS)
@@ -141,9 +189,13 @@ Disponibilidade mínima 99,9% em horário de produção.
 7. Avaliação do supervisor (confirmar/descartar/ignorar)
 8. Geração de log de auditoria e atualização do dashboard
 
+
 ---
 
+
 ### 3. Diagrama de Classes
+
+
 
 
 **Entidades principais:**
@@ -154,15 +206,19 @@ Disponibilidade mínima 99,9% em horário de produção.
 - **Usuario** → associação 1:N com **Alerta** (recebe notificações)
 - **Gestor** → associação 1:N com **RelatorioConformidade**
 
+
 **Coerência entre diagramas:**
 - Todos os casos de uso têm suporte nos demais diagramas
 - As atividades refletem os métodos das classes
 - Os relacionamentos UML respeitam o domínio industrial
 
+
 # Protótipo - Sistema de Gestão de EPIs e Segurança Industrial
 
-## Link do protótipo navegável (Figma)
-[Clique aqui para acessar o protótipo](https://perch-divide-87350593.figma.site/)
+
+
+
+
 
 ## Instruções de navegação
 - Navegue pelas telas usando os botões interativos.
@@ -171,19 +227,82 @@ Disponibilidade mínima 99,9% em horário de produção.
   2. Visualização e confirmação de alerta de risco
   3. Geração de relatório de conformidade por setor
 
-## Vídeo de walkthrough
-[Assista ao vídeo explicativo](https://youtu.be/H64uD0sJVPw)
+
+
+
+
 
 ## Decisões de UX
 - Design adaptado para uso em tablet industrial (botões grandes, alto contraste)
 - Alertas priorizados por urgência
 - Imagem ofuscada para conformidade com LGPD
 
+
+## 🖥️ Telas do Protótipo (7 telas)
+
+
+| Tela | Nome | Descrição |
+|------|------|-----------|
+| 1 | Dashboard | Visão geral com risco por zona e KPIs |
+| 2 | Gestão de EPIs | Controle de colaboradores e EPIs |
+| 3 | Alertas e Notificações | Lista de eventos de risco ordenados por urgência |
+| 4 | Detalhe do Alerta | Evidência com imagem ofuscada e decisão |
+| 5 | Relatórios de Conformidade | Métricas, gráficos e exportação |
+| 6 | Login | Acesso ao sistema com autenticação |
+| 7 | Gerenciamento de Zonas | Configuração de zonas e EPIs obrigatórios |
+
+
+---
+
+
+## 🎯 Fluxos Principais
+
+
+### 1. Cadastro e consulta de EPI por colaborador
+> Tela 2 (Gestão de EPIs) → Busca → Clique no colaborador → Ver detalhes
+
+
+### 2. Emissão e visualização de alerta de risco
+> Tela 1 (Dashboard) → "Ver Alertas" → Clique no card → Tela 3 → "Ver detalhes" → Tela 4 → Confirmar/Descartar
+
+
+### 3. Geração de relatório de conformidade por setor
+> Tela 1 (Dashboard) → "Relatórios" → Selecionar setor/período → Gerar → Exportar
+
+
+### 4. Gestão de zonas de risco
+> Tela 1 → "Zonas" → Visualizar cards → Editar configurações
+
+
+### 5. Acesso ao sistema
+> Tela 6 (Login) → Inserir credenciais → "Entrar" → Dashboard
+
+
+---
+
+
+## 🎨 Sistema Visual
+
+
+| Elemento | Especificação |
+|----------|---------------|
+| Cores | #1E2A5E (header), #E67E22 (alertas), #27AE60 (confirmar), #F4F4F4 (fundo) |
+| Tipografia | Montserrat (títulos), Open Sans (corpo) |
+| Botões | Altura mínima 48px (toque com luva) |
+| Ícones | Feather Icons (linha grossa) |
+| Cards | Sombra suave, bordas 8px |
+
+
+
+
+
+
 ## 🔗 Links Rápidos
+
 
 | Recurso | Link |
 |---------|------|
-| 🎨 **Protótipo Navegável (Figma)** | [Clique aqui](https://perch-divide-87350593.figma.site/) |
-| 📋 **Board Trello (Product + Sprint Backlog)** | [Clique aqui](https://trello.com/b/wHVMq7wY/sprint-softaware) |
-| 🎬 **Vídeo Walkthrough (3 min)** | [Assistir](https://youtu.be/H64uD0sJVPw) |
-
+| 🎨 **Protótipo Navegável (Figma)** | [Clique aqui](https://perch-divide-87350593.figma.site) |
+| 📋 **Board Trello** | [Clique aqui](https://trello.com/invite/b/6a8db95f95592c6476de9990/ATTIf4c7811915d9594eb067e17f364843e4AD7407F4/sprint-softaware) |
+| 📄 **Documento de Cerimônias Scrum** | [Ver documento](docs/cerimonias-sprint3.md) |
+| 🎬 **Vídeo Walkthrough** | [Assistir no YouTube](https://youtu.be/H64uD0sJVPw) |
