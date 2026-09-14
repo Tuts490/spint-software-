@@ -162,7 +162,7 @@ Disponibilidade mínima 99,9% em horário de produção.
 # Protótipo - Sistema de Gestão de EPIs e Segurança Industrial
 
 ## Link do protótipo navegável (Figma)
-[Clique aqui para acessar o protótipo](https://perch-divide-87350593.figma.site)
+[Clique aqui para acessar o protótipo](https://perch-divide-87350593.figma.site/)
 
 ## Instruções de navegação
 - Navegue pelas telas usando os botões interativos.
@@ -178,3 +178,12 @@ Disponibilidade mínima 99,9% em horário de produção.
 - Design adaptado para uso em tablet industrial (botões grandes, alto contraste)
 - Alertas priorizados por urgência
 - Imagem ofuscada para conformidade com LGPD
+
+## 🔗 Links Rápidos
+
+| Recurso | Link |
+|---------|------|
+| 🎨 **Protótipo Navegável (Figma)** | [Clique aqui](https://perch-divide-87350593.figma.site/) |
+| 📋 **Board Trello (Product + Sprint Backlog)** | [Clique aqui](https://trello.com/b/wHVMq7wY/sprint-softaware) |
+| 🎬 **Vídeo Walkthrough (3 min)** | [Assistir](https://youtu.be/H64uD0sJVPw) |
+
