@@ -1,3 +1,4 @@
+
 # 🛡️ ProactiveGuard - Segurança Industrial Proativa com IA
 
 **ProactiveGuard** é uma solução inovadora de segurança industrial que substitui o modelo punitivo-tradicional por um sistema de **monitoramento contínuo baseado em Inteligência Artificial**. O sistema é capaz de detectar riscos em tempo real, emitir alertas preventivos e promover uma cultura de prevenção antes da infração ocorrer.
@@ -28,9 +29,10 @@ Desenvolvido para o contexto do **Metaindústria**, o sistema atua como uma **fe
 
 | Recurso | Link |
 |---------|------|
+| 🎨 **Protótipo Navegável (Figma)** | [Clique aqui](https://perch-divide-87350593.figma.site) |
 | 📋 **Board Trello** | [Clique aqui](https://trello.com/invite/b/6a8db95f95592c6476de9990/ATTIf4c7811915d9594eb067e17f364843e4AD7407F4/sprint-softaware) |
-| 📄 **Documento de Cerimônias Scrum** |(cerimonias-sprint3.md) |
-| 🎬 **Vídeo Walkthrough (YouTube)** | [https://youtu.be/Tw4zuxo9zgE] |
+| 📄 **Documento de Cerimônias Scrum** | [Ver documento](./cerimonias-sprint3.md) |
+| 🎬 **Vídeo Walkthrough (YouTube)** | [Assistir no YouTube](https://youtu.be/Tw4zuxo9zgE) |
 
 ---
 
@@ -101,17 +103,16 @@ O protótipo foi desenhado com foco em UX para tablets industriais (botões gran
 Para visualizar o Dashboard construído em código (React + Vite), siga os passos:
 
 **1. Pré-requisitos**
-Certifique-se de ter o [Node.js] instalado em sua máquina.
+Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
 
 **2. Abra a pasta correta no VS Code**
 Abra o VS Code na pasta raiz deste projeto (onde fica o arquivo `package.json`).
 
 **3. Instale as dependências**
-No terminal do VS Code , rode:
+No terminal do VS Code, rode:
 ```bash
 npm install
+4. Inicie o servidor
+Após instalar as dependências, rode:
 
-Após instalar, rode:
 npm run dev
-5. Acesse no navegador
-Segure Ctrl e clique no link exibido no terminal .
