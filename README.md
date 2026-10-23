@@ -32,7 +32,7 @@ Desenvolvido para o contexto do **Metaindústria**, o sistema atua como uma **fe
 |
 | 📋 **Board Trello** | [Clique aqui](https://trello.com/invite/b/6a8db95f95592c6476de9990/ATTIf4c7811915d9594eb067e17f364843e4AD7407F4/sprint-softaware) |
 | 📄 **Documento de Cerimônias Scrum** | [Ver documento](./cerimonias-sprint3.md) |
-| 🎬 **Vídeo Walkthrough (YouTube)** | [Assistir no YouTube](https://youtu.be/Tw4zuxo9zgE) |
+| 🎬 **Vídeo Walkthrough (YouTube)** | [Assistir no YouTube](https://youtu.be/0j4-vZpgsto) |
 
 ---
 
